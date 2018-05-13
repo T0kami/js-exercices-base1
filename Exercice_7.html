@@ -5,6 +5,25 @@
     <meta charset="UTF-8">
 </head>
 <body>
+  <form onsubmit="calcul()">
+      <label for="pointure">Pointure : </label>
+      <input type="text" id="pointure" name="pointure" value=""/>
+      <label for="naissance">Année de naissance : </label>
+      <input type="text" id="naissance" name="naissance" value=""/>
 
+      <button id="valider" name="valider">Valider</button>
+  </form>
+  <script type="text/javascript">
+    function calcul(){
+      var pointure = document.getElementById("pointure").value;
+      var naissance = document.getElementById("naissance").value;
+
+      var resultat = (((pointure*2+5)*50)- naissance)+1766;
+
+      alert(resultat);
+
+
+    }
+  </script>
 </body>
 </html>

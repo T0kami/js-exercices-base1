@@ -5,12 +5,24 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form>
+        <form onsubmit="calcul()">
             <label for="premier_nombre">Premier nombre : </label>
             <input type="text" id="premier_nombre" name="premier_nombre" value=""/>
             <label for="deuxieme_nombre">Deuxième nombre : </label>
             <input type="text" id="deuxieme_nombre" name="deuxieme_nombre" value=""/>
             <button id="valider" name ="valider">Valider</button>
         </form>
+
+        <script type="text/javascript">
+        function calcul(){
+          var nbr1 = document.getElementById("premier_nombre").value;
+          var nbr2 = document.getElementById("deuxieme_nombre").value;
+
+          nbr1 = parseInt(nbr1);
+          var resultat = nbr1*nbr2;
+          alert(resultat);
+        }
+
+        </script>
     </body>
 </html>

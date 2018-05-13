@@ -5,6 +5,24 @@
         <meta charset="UTF-8">
     </head>
     <body>
+      <form onsubmit="sayHello()">
+          <label for="nom">Nom : </label>
+          <input type="text" name="nom" id="nom" value=""/>
+          <label for="prenom">Prénom : </label>
+          <input type="text" name="prenom" id="prenom" value=""/>
+          <label for="ville">Ville : </label>
+          <input type="text" name="ville" id="ville"  value=""/>
+          <button  name="valider" id="valider">Valider</button>
+      </form>
 
+      <script type="text/javascript">
+        function sayHello(){
+          var nom = document.getElementById("nom").value;
+          var prenom = document.getElementById("prenom").value;
+          var ville = document.getElementById("ville").value;
+
+          alert(nom + "\n" + prenom + "\n" + ville);
+        }
+      </script>
     </body>
 </html>

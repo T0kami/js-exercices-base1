@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<form>
-    <label for="nom">Nom : </label>
-    <input type="text" name="nom" id="nom" value=""/>
+<form onsubmit="sayHello()">
     <label for="prenom">Prénom : </label>
     <input type="text" name="prenom" id="prenom" value=""/>
-    <label for="ville">Ville : </label>
-    <input type="text" name="ville" id="ville"  value=""/>
     <button  name="valider" id="valider">Valider</button>
 </form>
+
+<script type="text/javascript">
+  function sayHello(){
+    var prenom = document.getElementById("prenom").value;
+    alert("Bonjour " + prenom);
+  }
+</script>
 </body>
 </html>
